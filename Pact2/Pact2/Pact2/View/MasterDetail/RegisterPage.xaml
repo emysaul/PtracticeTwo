@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Pact2.View.MasterDetail.RegisterPage"
+             BackgroundColor="white"
+             >
+    <ContentPage.Content >
+        <StackLayout Padding="10" Spacing="10" VerticalOptions="CenterAndExpand">
+            <Image Source="ilogointec" HeightRequest="150"   />
+
+            <Entry Placeholder="User Name"  Text="{Binding User.UserName, Mode=TwoWay}" />
+            <Entry Placeholder="Email"  Text="{Binding User.Email, Mode=TwoWay}" />
+            <Entry Placeholder="Password" Text="{Binding User.Password, Mode=TwoWay}" IsPassword="True" />
+            <Entry Placeholder="Confirm Password" Text="{Binding ConfirmatedPassword, Mode=TwoWay}" IsPassword="True" />
+
+            <Button Text="Register"
+                            TextColor="White" 
+                            BackgroundColor="red"
+                            Command="{Binding RegisterCommand}" />
+
+            <Label Text="{Binding Result, Mode=OneWay}" 
+                           TextColor="Red"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="End" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

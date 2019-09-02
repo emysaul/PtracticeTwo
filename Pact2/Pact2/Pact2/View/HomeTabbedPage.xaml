@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Pact2.ModelView"
+             x:Class="Pact2.View.HomeTabbedPage" 
+             BarBackgroundColor="Red">
+    
+            <ContentPage Title="Login"   BackgroundColor="White" >
+                <StackLayout Padding="10" Spacing="10" VerticalOptions="CenterAndExpand">
+                    <Image Source="ilogointec" HeightRequest="150"  />
+
+                    <Entry Placeholder="Introduzca usuario"  Text="{Binding User.UserName, Mode=TwoWay}" />
+                    <Entry Placeholder="Introduzca password" Text="{Binding User.Password, Mode=TwoWay}" IsPassword="True" />
+
+                    <Button Text="Login"
+                            TextColor="White" 
+                            BackgroundColor="red"
+                            Command="{Binding LoginCommand}" />
+
+                    <Label Text="Registro" />
+
+            <Label 
+                TextColor="Red"
+                HorizontalOptions="Center"
+                TextDecorations="Underline"
+                Text="Registro">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RegisterCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+                    
+
+            <Label Text="{Binding Result, Mode=OneWay}" 
+                           TextColor="Red"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="End" />
+
+                    
+                    
+                </StackLayout>
+            </ContentPage>
+            <ContentPage Title="Home" BackgroundColor="White"  >
+                <ScrollView>
+                    <StackLayout Padding="10">
+                        <Label Text="UNETE AL RETO!" TextColor="Red" FontSize="Large" />
+                        <Frame  CornerRadius="10" Padding="0" HeightRequest="200" BorderColor="black"  >
+                            <Grid BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="Resinto de Intec" Margin="2" VerticalOptions="Center" FontAttributes="Bold"  />
+                                <Image Source="Amsterdam.jpg" Grid.Row="1" Aspect="Fill"/>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Doing this from Visual Studio on Windows will automatically update the FodyWeavers.xml file that is added to your project. With this file you weave the different Fody plugins into your project. On Xamarin Studio the file gets added to your project, but you will need to add the PropertyChanged entry to it yourself. It isn't hard! Just open the FodyWeavers.xml file Doing this from Visual Studio on Windows will automatically update the FodyWeavers.xml file that is added to your project. With this file you weave the different Fody plugins into your project. On Xamarin Studio the file gets added to your project, but you will need to add the PropertyChanged entry to it yourself. It isn't hard! Just Doing this from Visual Studio on Windows will automatically update the FodyWeavers.xml file that is added to your project. With this file you weave the different Fody plugins into your project. On Xamarin Studio the file gets added to your project, but you will need to add the PropertyChanged entry to it yourself. It isn't hard! Just open the FodyWeavers.xml file open the FodyWeavers.xml file and add  into the Weavers node. The resulting file should look like this." />
+                    </StackLayout>
+                </ScrollView>
+            </ContentPage>
+
+</TabbedPage>
+
