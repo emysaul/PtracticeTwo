@@ -2,10 +2,10 @@
 
 ##APLICATION SCREEMS 
 
-![alt text](Pics/One)
+![alt text](https://github.com/emysaul/PtracticeTwo/blob/master/Pics/Four.PNG)
 
-![alt text](Pics/Two)
+![alt text](https://github.com/emysaul/PtracticeTwo/blob/master/Pics/Four.PNG)
 
-![alt text](Pics/Trhee)
+![alt text](https://github.com/emysaul/PtracticeTwo/blob/master/Pics/Four.PNG)
 
-![alt text](Pics/Four)
+![alt text](https://github.com/emysaul/PtracticeTwo/blob/master/Pics/Four.PNG)
